@@ -1,0 +1,49 @@
+﻿@model Mascota
+
+<h2>
+    Mantendor de Mascota
+</h2>
+
+@using (@Html.BeginForm("Ficha", 
+                "Home", 
+                FormMethod.Post, 
+                new { @class = "form-horizontal" })){ 
+
+ 
+<h5> Datos de su mascota</h5>
+<div class="form-group col-md-7 col-sm-7">
+    <label class="control-label">Còdigo</label>
+    @Html.TextBoxFor(m=>m.codigo, null, new { @class="form-control"})
+</div>
+<div class="form-group col-md-7 col-sm-7">
+    <label class="control-label">Nombre</label>
+    @Html.TextBoxFor(m => m.nombre, null, new { @class = "form-control" })
+</div>
+<div class="form-group col-md-7 col-sm-7">
+    <label class="control-label">Propietario</label>
+    @Html.TextBoxFor(m => m.propietario, null, new { @class = "form-control" })
+</div>
+<div class="form-group col-md-7 col-sm-7">
+    <label class="control-label">Raza</label>
+    @Html.TextBoxFor(m => m.raza, null, new { @class = "form-control" })
+</div>
+<div class="form-group col-md-7 col-sm-7">
+    <label class="control-label">Edad</label>
+    @Html.TextBoxFor(m => m.edad, null, new { @class = "form-control" })
+</div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-1">
+        <button type="reset" class="btn btn-info">
+            Limpiar
+        </button>
+    </div>
+    <div class="col-sm-offset-1 col-sm-1">
+        <button type="submit" class="btn btn-primary">
+            Guardar
+        </button>
+    </div>
+</div>
+}
+
+
